@@ -64,8 +64,9 @@ body {
 }
 
 .brand-logo {
-  width: 36rem;
-  height: 9.6rem;
+  width: clamp(11rem, 24vw, 18rem);
+  height: auto;
+  max-height: 4.5rem;
   object-fit: contain;
   border-radius: 0;
   display: block;
@@ -263,6 +264,11 @@ h2 {
   .hero-grid,
   .contact-panel {
     grid-template-columns: 1fr;
+  }
+
+  .brand-logo {
+    width: clamp(9rem, 50vw, 14rem);
+    max-height: 3.8rem;
   }
 
   .cards {
