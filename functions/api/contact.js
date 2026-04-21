@@ -20,6 +20,7 @@ async function sendWithResend(env, payload) {
   const text = [
     `Name: ${payload.name}`,
     `Email: ${payload.email}`,
+    `City: ${payload.city}`,
     `Language: ${payload.language}`,
     "",
     "Message:",
@@ -54,6 +55,7 @@ export async function onRequestPost(context) {
     const body = await context.request.json();
     const name = String(body.name || "").trim();
     const email = String(body.email || "").trim();
+    const city = String(body.city || "").trim();
     const message = String(body.message || "").trim();
     const website = String(body.website || "").trim();
     const language = body.language === "en" ? "en" : "fr";
@@ -62,7 +64,7 @@ export async function onRequestPost(context) {
       return json({ ok: true });
     }
 
-    if (!name || !email || !message) {
+    if (!name || !email || !city || !message) {
       return json({ error: "Missing required fields" }, 400);
     }
 
@@ -74,6 +76,7 @@ export async function onRequestPost(context) {
     const delivered = await sendWithResend(context.env, {
       name,
       email,
+      city,
       message,
       language,
     });
@@ -82,6 +85,7 @@ export async function onRequestPost(context) {
       console.log("Contact request received (email provider not configured):", {
         name,
         email,
+        city,
         language,
       });
     }

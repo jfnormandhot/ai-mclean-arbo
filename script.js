@@ -32,6 +32,7 @@ const translations = {
     sendingBtn: "Envoi en cours...",
     namePlaceholder: "Votre nom",
     emailPlaceholder: "Votre courriel",
+    cityPlaceholder: "Votre ville",
     messagePlaceholder: "Décrivez votre projet",
     formSuccess: "Merci, votre demande a été envoyée.",
     formError:
@@ -71,6 +72,7 @@ const translations = {
     sendingBtn: "Sending...",
     namePlaceholder: "Your name",
     emailPlaceholder: "Your email",
+    cityPlaceholder: "Your city",
     messagePlaceholder: "Describe your project",
     formSuccess: "Thanks, your request has been sent.",
     formError: "Something went wrong. Please try again or call us directly.",
@@ -144,10 +146,11 @@ if (contactForm) {
     const formData = new FormData(contactForm);
     const name = String(formData.get("name") || "").trim();
     const email = String(formData.get("email") || "").trim();
+    const city = String(formData.get("city") || "").trim();
     const message = String(formData.get("message") || "").trim();
     const website = String(formData.get("website") || "").trim();
 
-    if (!name || !email || !message) {
+    if (!name || !email || !city || !message) {
       setFormStatus("error", t.formValidation);
       return;
     }
@@ -162,7 +165,7 @@ if (contactForm) {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ name, email, message, website, language }),
+        body: JSON.stringify({ name, email, city, message, website, language }),
       });
 
       if (!response.ok) {

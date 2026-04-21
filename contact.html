@@ -44,6 +44,37 @@
           <form class="contact-form" id="contactForm" action="/api/contact" method="post" novalidate>
             <input type="text" name="name" required data-i18n-placeholder="namePlaceholder" placeholder="Your name" />
             <input type="email" name="email" required data-i18n-placeholder="emailPlaceholder" placeholder="Your email" />
+            <input
+              type="text"
+              name="city"
+              list="quebecCities"
+              required
+              autocomplete="address-level2"
+              data-i18n-placeholder="cityPlaceholder"
+              placeholder="Your city"
+            />
+            <datalist id="quebecCities">
+              <option value="Montreal"></option>
+              <option value="Quebec City"></option>
+              <option value="Laval"></option>
+              <option value="Gatineau"></option>
+              <option value="Longueuil"></option>
+              <option value="Sherbrooke"></option>
+              <option value="Saguenay"></option>
+              <option value="Trois-Rivieres"></option>
+              <option value="Levis"></option>
+              <option value="Terrebonne"></option>
+              <option value="Saint-Jean-sur-Richelieu"></option>
+              <option value="Repentigny"></option>
+              <option value="Drummondville"></option>
+              <option value="Saint-Jerome"></option>
+              <option value="Granby"></option>
+              <option value="Blainville"></option>
+              <option value="Shawinigan"></option>
+              <option value="Dollard-des-Ormeaux"></option>
+              <option value="Rimouski"></option>
+              <option value="Chateauguay"></option>
+            </datalist>
             <input class="hp-field" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
             <textarea name="message" rows="4" required data-i18n-placeholder="messagePlaceholder" placeholder="Describe your project"></textarea>
             <button type="submit" class="btn btn-primary" data-i18n="sendBtn">Send request</button>
