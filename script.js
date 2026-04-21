@@ -106,7 +106,7 @@ function applyLanguage(language) {
   });
 
   localStorage.setItem("preferredLanguage", language);
-  langToggle.textContent = language === "fr" ? "EN" : "FR";
+  langToggle.textContent = language === "fr" ? "English" : "Francais";
 }
 
 function toggleLanguage() {
