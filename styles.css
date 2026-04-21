@@ -64,9 +64,9 @@ body {
 }
 
 .brand-logo {
-  width: clamp(11rem, 24vw, 18rem);
+  width: clamp(22rem, 48vw, 36rem);
   height: auto;
-  max-height: 4.5rem;
+  max-height: 9rem;
   object-fit: contain;
   border-radius: 0;
   display: block;
@@ -267,8 +267,8 @@ h2 {
   }
 
   .brand-logo {
-    width: clamp(9rem, 50vw, 14rem);
-    max-height: 3.8rem;
+    width: clamp(18rem, 90vw, 28rem);
+    max-height: 7.6rem;
   }
 
   .cards {
