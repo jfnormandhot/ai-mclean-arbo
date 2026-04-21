@@ -64,10 +64,10 @@ body {
 }
 
 .brand-logo {
-  width: 4rem;
-  height: 4rem;
+  width: 12rem;
+  height: 3.2rem;
   object-fit: contain;
-  border-radius: 6px;
+  border-radius: 0;
   display: block;
 }
 
