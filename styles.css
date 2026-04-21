@@ -36,11 +36,6 @@ body {
   border-bottom: 1px solid var(--line);
 }
 
-.topbar .container {
-  width: 100%;
-  margin: 0;
-}
-
 .nav-wrap {
   display: flex;
   align-items: center;
