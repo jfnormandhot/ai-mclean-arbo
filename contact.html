@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Mclean Arboriste</title>
+    <meta
+      name="description"
+      content="Contact Mclean Arboriste for a free consultation on pruning, tree removal, and stump grinding services."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Mclean Arboriste" />
+    <link rel="canonical" href="https://www.mclean-arbororiste.com/contact" />
+    <link rel="alternate" href="https://www.mclean-arbororiste.com/contact" hreflang="fr" />
+    <link rel="alternate" href="https://www.mclean-arbororiste.com/contact?lang=en" hreflang="en" />
+    <link rel="alternate" href="https://www.mclean-arbororiste.com/contact" hreflang="x-default" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav-wrap">
+        <a class="brand" href="./index.html">
+          <span class="brand-mark">C</span>
+          <span>Mclean Arboriste</span>
+        </a>
+        <button id="langToggle" class="lang-toggle" type="button" aria-label="Toggle language">
+          EN
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section id="contact" class="section">
+        <div class="container contact-panel">
+          <div>
+            <h2 data-i18n="contactTitle">Request a Consultation</h2>
+            <p data-i18n="contactText">Tell us about your trees and we will get back to you within 24 hours.</p>
+          </div>
+          <form class="contact-form" id="contactForm" action="/api/contact" method="post" novalidate>
+            <input type="text" name="name" required data-i18n-placeholder="namePlaceholder" placeholder="Your name" />
+            <input type="email" name="email" required data-i18n-placeholder="emailPlaceholder" placeholder="Your email" />
+            <input class="hp-field" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <textarea name="message" rows="4" required data-i18n-placeholder="messagePlaceholder" placeholder="Describe your project"></textarea>
+            <button type="submit" class="btn btn-primary" data-i18n="sendBtn">Send request</button>
+            <p id="formStatus" class="form-status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>© <span id="year"></span> Mclean Arboriste</p>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
