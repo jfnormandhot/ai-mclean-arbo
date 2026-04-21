@@ -22,7 +22,7 @@ const translations = {
     service3Title: "Essouchage",
     service3Text:
       "Éliminez les souches et récupérez votre espace extérieur rapidement et proprement.",
-    aboutTitle: "Pourquoi choisir mclean arboristes",
+    aboutTitle: "Pourquoi choisir Mclean Arboriste",
     aboutText:
       "Nous sommes entièrement assurés, formés en sécurité et engagés envers des pratiques durables de soin des arbres. Chaque projet est réalisé avec professionnalisme, prix transparents et respect de votre propriété.",
     contactTitle: "Demandez une consultation",
@@ -61,7 +61,7 @@ const translations = {
     service3Title: "Stump Grinding",
     service3Text:
       "Eliminate stumps and reclaim your outdoor space quickly and cleanly.",
-    aboutTitle: "Why Choose mclean arboristes",
+    aboutTitle: "Why Choose Mclean Arboriste",
     aboutText:
       "We are fully insured, safety trained, and committed to sustainable tree care practices. Every project is handled with professionalism, transparent pricing, and respect for your property.",
     contactTitle: "Request a Consultation",
