@@ -1,0 +1,265 @@
+:root {
+  --bg: #f5f7f2;
+  --surface: #ffffff;
+  --text: #122015;
+  --muted: #4b5a4f;
+  --primary: #2f7d4a;
+  --primary-dark: #1f5d36;
+  --line: #d6ddd2;
+  --shadow: 0 10px 30px rgba(18, 32, 21, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(245, 247, 242, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.brand-mark {
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--primary);
+  color: #fff;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.nav-links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.lang-toggle {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  padding: 0.5rem 0.85rem;
+  border-radius: 999px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.hero {
+  padding: 5rem 0 3rem;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.eyebrow {
+  color: var(--primary);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.8rem;
+}
+
+h1 {
+  margin: 0.3rem 0 0.7rem;
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  line-height: 1.1;
+}
+
+.hero-copy {
+  color: var(--muted);
+  max-width: 60ch;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 1.4rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 700;
+  padding: 0.75rem 1rem;
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+}
+
+.btn-secondary {
+  background: var(--surface);
+  color: var(--text);
+  border-color: var(--line);
+}
+
+.hero-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  padding: 1.4rem;
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+}
+
+.hero-card h3 {
+  margin-top: 0;
+}
+
+.hero-card p {
+  color: var(--muted);
+}
+
+.hero-card a {
+  color: var(--primary-dark);
+  font-weight: 700;
+}
+
+.section {
+  padding: 3.2rem 0;
+}
+
+.section.alt {
+  background: #edf2ea;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 2.8vw, 2.2rem);
+  margin: 0 0 1rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1.1rem;
+}
+
+.card p {
+  color: var(--muted);
+}
+
+.contact-panel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: 1.2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.contact-form {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.7rem 0.75rem;
+  font: inherit;
+}
+
+.hp-field {
+  position: absolute;
+  left: -10000px;
+}
+
+.form-status {
+  margin: 0.2rem 0 0;
+  min-height: 1.3rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.form-status.error {
+  color: #a32525;
+}
+
+.form-status.success {
+  color: var(--primary-dark);
+}
+
+.footer {
+  border-top: 1px solid var(--line);
+  padding: 1rem 0 2rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .hero-grid,
+  .contact-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-links {
+    display: none;
+  }
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canopée Arboriculture | Arborist Services</title>
+    <meta
+      name="description"
+      content="Canopée Arboriculture offers safe tree pruning, removal, and emergency arborist services in French and English."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Canopée Arboriculture" />
+    <link rel="canonical" href="https://www.mclean-arbororiste.com/" />
+    <link rel="alternate" href="https://www.mclean-arbororiste.com/" hreflang="fr" />
+    <link rel="alternate" href="https://www.mclean-arbororiste.com/?lang=en" hreflang="en" />
+    <link rel="alternate" href="https://www.mclean-arbororiste.com/" hreflang="x-default" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Canopée Arboriculture | Arborist Services" />
+    <meta
+      property="og:description"
+      content="Certified arborists for pruning, tree removal, stump grinding, and emergency storm response."
+    />
+    <meta property="og:url" content="https://www.mclean-arbororiste.com/" />
+    <meta property="og:site_name" content="Canopée Arboriculture" />
+    <meta property="og:locale" content="fr_CA" />
+    <meta property="og:locale:alternate" content="en_CA" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Canopée Arboriculture | Arborist Services" />
+    <meta
+      name="twitter:description"
+      content="Professional bilingual tree care services for residential and commercial properties."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "TreeService",
+        "name": "Canopée Arboriculture",
+        "description": "Bilingual arborist services: pruning, tree removal, stump grinding, and emergency response.",
+        "telephone": "+1-514-555-0123",
+        "areaServed": {
+          "@type": "AdministrativeArea",
+          "name": "Greater Montreal"
+        },
+        "availableLanguage": ["fr", "en"],
+        "url": "https://www.mclean-arbororiste.com/"
+      }
+    </script>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav-wrap">
+        <a class="brand" href="#home">
+          <span class="brand-mark">C</span>
+          <span>Canopée Arboriculture</span>
+        </a>
+        <nav class="nav-links">
+          <a href="#services" data-i18n="navServices">Services</a>
+          <a href="#about" data-i18n="navAbout">About</a>
+          <a href="#contact" data-i18n="navContact">Contact</a>
+        </nav>
+        <button id="langToggle" class="lang-toggle" type="button" aria-label="Toggle language">
+          EN
+        </button>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <p class="eyebrow" data-i18n="eyebrow">Certified arborists</p>
+            <h1 data-i18n="heroTitle">Healthy trees, safer properties.</h1>
+            <p class="hero-copy" data-i18n="heroText">
+              We provide expert pruning, tree removal, and emergency services with a safety-first approach.
+            </p>
+            <div class="hero-actions">
+              <a href="#contact" class="btn btn-primary" data-i18n="ctaQuote">Get a free quote</a>
+              <a href="tel:+15145550123" class="btn btn-secondary">+1 (514) 555-0123</a>
+            </div>
+          </div>
+          <div class="hero-card">
+            <h3 data-i18n="cardTitle">24/7 Storm Emergency</h3>
+            <p data-i18n="cardText">
+              Fast response for broken limbs, dangerous trees, and post-storm cleanup.
+            </p>
+            <a href="#contact" data-i18n="cardLink">Request immediate assistance</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="section">
+        <div class="container">
+          <h2 data-i18n="servicesTitle">Our Services</h2>
+          <div class="cards">
+            <article class="card">
+              <h3 data-i18n="service1Title">Tree Pruning</h3>
+              <p data-i18n="service1Text">
+                Improve tree health, structure, and appearance with precision pruning.
+              </p>
+            </article>
+            <article class="card">
+              <h3 data-i18n="service2Title">Tree Removal</h3>
+              <p data-i18n="service2Text">
+                Safe removal of hazardous or unwanted trees in residential and commercial spaces.
+              </p>
+            </article>
+            <article class="card">
+              <h3 data-i18n="service3Title">Stump Grinding</h3>
+              <p data-i18n="service3Text">
+                Eliminate stumps and reclaim your outdoor space quickly and cleanly.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section alt">
+        <div class="container">
+          <h2 data-i18n="aboutTitle">Why Choose Canopée</h2>
+          <p data-i18n="aboutText">
+            We are fully insured, safety trained, and committed to sustainable tree care practices. Every project is handled with professionalism, transparent pricing, and respect for your property.
+          </p>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container contact-panel">
+          <div>
+            <h2 data-i18n="contactTitle">Request a Consultation</h2>
+            <p data-i18n="contactText">Tell us about your trees and we will get back to you within 24 hours.</p>
+          </div>
+          <form class="contact-form" id="contactForm" action="/api/contact" method="post" novalidate>
+            <input type="text" name="name" required data-i18n-placeholder="namePlaceholder" placeholder="Your name" />
+            <input type="email" name="email" required data-i18n-placeholder="emailPlaceholder" placeholder="Your email" />
+            <input class="hp-field" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <textarea name="message" rows="4" required data-i18n-placeholder="messagePlaceholder" placeholder="Describe your project"></textarea>
+            <button type="submit" class="btn btn-primary" data-i18n="sendBtn">Send request</button>
+            <p id="formStatus" class="form-status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>© <span id="year"></span> Canopée Arboriculture</p>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
