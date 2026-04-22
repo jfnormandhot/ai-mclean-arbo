@@ -23,15 +23,15 @@ npx serve .
    - Build output directory: `/`
 5. Click **Save and Deploy**.
 
-### Optional: enable contact email delivery
+### Optional: enable Zoho ticket creation
 
 The contact form posts to `functions/api/contact.js`.
 
-Set these Cloudflare Pages environment variables to send email via Resend:
+Set these Cloudflare Pages environment variables to create tickets in Zoho Desk:
 
-- `RESEND_API_KEY`
-- `CONTACT_TO_EMAIL` (where requests are received)
-- `CONTACT_FROM_EMAIL` (verified sender in Resend)
+- `ZOHO_DESK_ACCESS_TOKEN` (OAuth access token for Zoho Desk API)
+- `ZOHO_DESK_ORG_ID` (your Zoho Desk organization ID)
+- `ZOHO_DESK_DEPARTMENT_ID` (optional, if you want ticket routing to a specific department)
 
 If these values are not set, submissions are still accepted and logged in Cloudflare logs.
 

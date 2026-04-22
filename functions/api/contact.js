@@ -7,39 +7,45 @@ const json = (body, status = 200) =>
     },
   });
 
-async function sendWithResend(env, payload) {
-  if (!env.RESEND_API_KEY || !env.CONTACT_TO_EMAIL || !env.CONTACT_FROM_EMAIL) {
+async function createZohoDeskTicket(env, payload) {
+  if (!env.ZOHO_DESK_ACCESS_TOKEN || !env.ZOHO_DESK_ORG_ID) {
     return false;
   }
 
   const subject =
     payload.language === "fr"
-      ? "Nouvelle demande - Canopée Arboriculture"
-      : "New request - Canopee Arboriculture";
+      ? `Nouvelle demande - ${payload.city}`
+      : `New request - ${payload.city}`;
 
-  const text = [
-    `Name: ${payload.name}`,
-    `Email: ${payload.email}`,
-    `City: ${payload.city}`,
-    `Language: ${payload.language}`,
-    "",
-    "Message:",
-    payload.message,
-  ].join("\n");
+  const description = [
+    `<p><strong>Name:</strong> ${payload.name}</p>`,
+    `<p><strong>Email:</strong> ${payload.email}</p>`,
+    `<p><strong>City:</strong> ${payload.city}</p>`,
+    `<p><strong>Language:</strong> ${payload.language}</p>`,
+    `<p><strong>Message:</strong><br>${payload.message.replace(/\n/g, "<br>")}</p>`,
+  ].join("");
 
-  const response = await fetch("https://api.resend.com/emails", {
+  const body = {
+    subject,
+    departmentId: env.ZOHO_DESK_DEPARTMENT_ID || undefined,
+    contact: {
+      firstName: payload.name,
+      lastName: "Website lead",
+      email: payload.email,
+    },
+    description,
+    channel: "Web",
+    status: "Open",
+  };
+
+  const response = await fetch("https://desk.zoho.com/api/v1/tickets", {
     method: "POST",
     headers: {
-      Authorization: `Bearer ${env.RESEND_API_KEY}`,
+      Authorization: `Zoho-oauthtoken ${env.ZOHO_DESK_ACCESS_TOKEN}`,
+      orgId: env.ZOHO_DESK_ORG_ID,
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({
-      from: env.CONTACT_FROM_EMAIL,
-      to: [env.CONTACT_TO_EMAIL],
-      reply_to: payload.email,
-      subject,
-      text,
-    }),
+    body: JSON.stringify(body),
   });
 
   return response.ok;
@@ -73,7 +79,7 @@ export async function onRequestPost(context) {
       return json({ error: "Invalid email address" }, 400);
     }
 
-    const delivered = await sendWithResend(context.env, {
+    const ticketCreated = await createZohoDeskTicket(context.env, {
       name,
       email,
       city,
@@ -81,8 +87,8 @@ export async function onRequestPost(context) {
       language,
     });
 
-    if (!delivered) {
-      console.log("Contact request received (email provider not configured):", {
+    if (!ticketCreated) {
+      console.log("Contact request received (Zoho Desk not configured):", {
         name,
         email,
         city,
