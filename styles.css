@@ -208,6 +208,40 @@ h2 {
   color: var(--muted);
 }
 
+.service-area-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  align-items: start;
+}
+
+.area-list {
+  margin: 0.8rem 0 0;
+  padding-left: 1.1rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.area-map-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: 0.7rem;
+}
+
+.area-map-card svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.map-label {
+  font-size: 12px;
+  fill: #1f5d36;
+  font-weight: 600;
+}
+
 .contact-panel {
   background: var(--surface);
   border: 1px solid var(--line);
@@ -262,6 +296,7 @@ h2 {
 
 @media (max-width: 900px) {
   .hero-grid,
+  .service-area-wrap,
   .contact-panel {
     grid-template-columns: 1fr;
   }

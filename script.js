@@ -22,6 +22,8 @@ const translations = {
     service3Title: "Essouchage",
     service3Text:
       "Éliminez les souches et récupérez votre espace extérieur rapidement et proprement.",
+    areaTitle: "Villes desservies",
+    areaText: "Nous desservons actuellement les villes du Quebec suivantes:",
     aboutTitle: "Pourquoi choisir Mclean Arboriste",
     aboutText:
       "Nous sommes entièrement assurés, formés en sécurité et engagés envers des pratiques durables de soin des arbres. Chaque projet est réalisé avec professionnalisme, prix transparents et respect de votre propriété.",
@@ -62,6 +64,8 @@ const translations = {
     service3Title: "Stump Grinding",
     service3Text:
       "Eliminate stumps and reclaim your outdoor space quickly and cleanly.",
+    areaTitle: "Cities We Support",
+    areaText: "We currently serve the following Quebec cities:",
     aboutTitle: "Why Choose Mclean Arboriste",
     aboutText:
       "We are fully insured, safety trained, and committed to sustainable tree care practices. Every project is handled with professionalism, transparent pricing, and respect for your property.",
