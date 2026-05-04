@@ -1,0 +1,16 @@
+---
+description: Commit and push to origin after completing code or content changes
+alwaysApply: true
+---
+
+# Git: commit and push after changes
+
+When you **edit, add, or delete** project files (code, HTML, CSS, config, assets) to fulfill a request:
+
+1. Before finishing the task, run `git status`. If there are meaningful changes, **commit** them with a short, clear message in imperative mood (e.g. "Add contact form honeypot field").
+2. **Push** to `origin` on the current branch (usually `main`): `git push origin <branch>`.
+3. If `git status` is clean, nothing to commit or push.
+4. If the user explicitly says not to commit, only to draft changes, or to leave git alone, skip commit/push for that turn.
+5. Do not amend or force-push unless the user asks. Prefer a normal commit + push.
+
+This repo is deployed from GitHub; pushing keeps the remote in sync with local fixes.
