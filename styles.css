@@ -42,6 +42,34 @@ body {
   justify-content: space-between;
   gap: 1rem;
   padding: 0.9rem 0;
+  flex-wrap: wrap;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-shrink: 0;
+}
+
+.client-hub-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.875rem;
+  text-decoration: none;
+  background: var(--primary);
+  color: #fff;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+.client-hub-link:hover {
+  background: var(--primary-dark);
+  color: #fff;
 }
 
 .brand {

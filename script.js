@@ -1,5 +1,6 @@
 const translations = {
   fr: {
+    clientHub: "Espace client",
     navServices: "Services",
     navAbout: "À propos",
     navContact: "Contact",
@@ -42,6 +43,7 @@ const translations = {
     formValidation: "Veuillez remplir tous les champs obligatoires.",
   },
   en: {
+    clientHub: "Client Hub",
     navServices: "Services",
     navAbout: "About",
     navContact: "Contact",
